@@ -1,0 +1,16 @@
+# persistance volume claim - PVC
+# kubectl get storageclass
+# kubectl apply -f local-pvc.yaml
+# kubectl get pvc
+
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mssql-claim
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 200Mi
+

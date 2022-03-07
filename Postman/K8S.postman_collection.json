@@ -1,0 +1,296 @@
+{
+	"info": {
+		"_postman_id": "74b32ead-6e77-470d-8a56-291563efce72",
+		"name": "K8S",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Platfrom Service (Ingress nginx)",
+			"item": [
+				{
+					"name": "Get All Platforms",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://acme.com/api/platform/",
+							"protocol": "http",
+							"host": [
+								"acme",
+								"com"
+							],
+							"path": [
+								"api",
+								"platform",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a individual platform",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://acme.com/api/platform/5",
+							"protocol": "http",
+							"host": [
+								"acme",
+								"com"
+							],
+							"path": [
+								"api",
+								"platform",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Platfrom",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"PowerShell\",\r\n    \"publisher\":\"Microsoft\",\r\n    \"cost\":\"Free\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://acme.com/api/platform",
+							"protocol": "http",
+							"host": [
+								"acme",
+								"com"
+							],
+							"path": [
+								"api",
+								"platform"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Platfrom Service (Node Port) Copy",
+			"item": [
+				{
+					"name": "Get All Platforms",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:30743/api/platform",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "30743",
+							"path": [
+								"api",
+								"platform"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a individual platform",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:30743/api/platform/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "30743",
+							"path": [
+								"api",
+								"platform",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Platfrom",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Docker\",\r\n    \"publisher\":\"Docker\",\r\n    \"cost\":\"Free\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:30743/api/platform",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "30743",
+							"path": [
+								"api",
+								"platform"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Command Service (Ingress nginx)",
+			"item": [
+				{
+					"name": "Test Inbound Connection",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://acme.com/api/c/Platforms",
+							"protocol": "http",
+							"host": [
+								"acme",
+								"com"
+							],
+							"path": [
+								"api",
+								"c",
+								"Platforms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Command for Platform",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"HowTo\": \"After finished developemtn need to run deployment powershell script \",\r\n    \"CommandLine\": \"<name of the powershell file>.ps1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://acme.com/api/c/Platforms/16/commands/",
+							"protocol": "http",
+							"host": [
+								"acme",
+								"com"
+							],
+							"path": [
+								"api",
+								"c",
+								"Platforms",
+								"16",
+								"commands",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Platforms",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://acme.com/api/c/Platforms",
+							"protocol": "http",
+							"host": [
+								"acme",
+								"com"
+							],
+							"path": [
+								"api",
+								"c",
+								"Platforms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Commands for Platform",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://acme.com/api/c/Platforms/16/commands",
+							"protocol": "http",
+							"host": [
+								"acme",
+								"com"
+							],
+							"path": [
+								"api",
+								"c",
+								"Platforms",
+								"16",
+								"commands"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Command for Platform",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://acme.com/api/c/Platforms/16/Commands/2",
+							"protocol": "http",
+							"host": [
+								"acme",
+								"com"
+							],
+							"path": [
+								"api",
+								"c",
+								"Platforms",
+								"16",
+								"Commands",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

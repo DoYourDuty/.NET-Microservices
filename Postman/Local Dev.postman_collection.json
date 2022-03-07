@@ -1,0 +1,221 @@
+{
+	"info": {
+		"_postman_id": "821532e2-71a7-4e52-91f1-cb515a6bfe54",
+		"name": "Local Dev",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Platfrom Service",
+			"item": [
+				{
+					"name": "Get All Platforms",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Platform",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Platform"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a individual platform",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Platform/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Platform",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Platfrom",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Azure\",\r\n    \"publisher\":\"Microsfot\",\r\n    \"cost\":\"NA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Platform/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Platform",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Command Service",
+			"item": [
+				{
+					"name": "Test Inbound Connection",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6000/api/c/Platforms",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"api",
+								"c",
+								"Platforms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Platforms",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6000/api/c/Platforms",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"api",
+								"c",
+								"Platforms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Commands for Platform",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6000/api/c/Platforms/1/commands",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"api",
+								"c",
+								"Platforms",
+								"1",
+								"commands"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Command for Platform",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6000/api/c/platforms/4/Commands/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"api",
+								"c",
+								"platforms",
+								"4",
+								"Commands",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Command for Platform",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"HowTo\": \"Push a dcoker container to hub\",\r\n    \"CommandLine\": \"docker push <name of the container>\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6000/api/c/Platforms/1/commands/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"api",
+								"c",
+								"Platforms",
+								"1",
+								"commands",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

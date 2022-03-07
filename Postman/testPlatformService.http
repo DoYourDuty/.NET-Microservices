@@ -1,0 +1,42 @@
+GET http://acme.com/api/platform/ HTTP/1.1
+
+
+###
+POST http://acme.com/api/platform HTTP/1.1
+Content-Type: application/json
+{
+    "name":"GoLang1",
+    "publisher":"Google",
+    "cost":"Free"
+}
+
+
+HTTP/1.1 201  - Created
+date: Thu, 20 Jan 2022 18:16:26 GMT
+content-type: application/json; charset=utf-8
+transfer-encoding: chunked
+connection: close
+location: http://acme.com/api/Platform/15
+
+
+###
+GET http://localhost:5000/protos/platforms.proto HTTP/1.1
+
+###
+
+GET http://localhost:6000/api/c/Platforms HTTP/1.1
+GET http://localhost:5000/api/Platform HTTP/1.1
+
+###
+
+POST http://localhost:6000/api/c/Platforms/1/commands/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "HowTo": "Push a dcoker container to hub",
+    "CommandLine": "docker push <name of the container>"
+}
+
+###
+
+GET http://localhost:6000/api/c/Platforms/1/commands HTTP/1.1
